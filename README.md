@@ -1,2 +1,0 @@
-# Satiscraft
- The Satisfactory game
