@@ -1,6 +1,7 @@
 package de.polylymer.satiscraft.main;
 
 import mooziii.annotation.PluginApp;
+import mooziii.config.Config;
 import mooziii.plugin.BSpigotApplication;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -23,7 +24,8 @@ public class Main extends BSpigotApplication {
 
     @Override
     public void load() {
-
+        Config.API_UPDATE_INTERVAL = 60;
+        Config.WEBAPI = false; // Web-API disabled by default so mods have to turn them on!
     }
 
     @Override
