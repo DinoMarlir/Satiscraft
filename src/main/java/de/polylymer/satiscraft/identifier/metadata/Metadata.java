@@ -34,5 +34,5 @@ public class Metadata {
     public static final String QUARTZ_NODE_PART = "quartzNodePart";
     public static final String QUARTZ_NODE_CORE = "quartzNodeCore";
     public static final String QUARTZ_NODE_BLOCK = "quartzNodeBlock";
-    
+
 }
