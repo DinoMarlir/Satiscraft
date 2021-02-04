@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public abstract class Mod extends JavaPlugin {
 
-    public abstract void startup();
+    public abstract void finishInit();
     public abstract void initialize();
     public abstract void shutdown();
 
@@ -20,6 +20,6 @@ public abstract class Mod extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        startup();
+        finishInit();
     }
 }
