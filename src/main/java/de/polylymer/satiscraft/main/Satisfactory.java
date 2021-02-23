@@ -5,8 +5,9 @@ import mooziii.config.Config;
 import mooziii.plugin.BSpigotApplication;
 import org.bukkit.plugin.java.JavaPlugin;
 
-@PluginApp(main = Main.class)
-public class Main extends BSpigotApplication {
+@PluginApp(main = Satisfactory.class)
+public class Satisfactory extends BSpigotApplication {
+    private static Satisfactory satisfactory;
     @Override
     public String name() {
         return "Satiscraft";
@@ -22,6 +23,10 @@ public class Main extends BSpigotApplication {
         return this;
     }
 
+    public static Satisfactory getFactory() {
+        return satisfactory;
+    }
+
     @Override
     public void load() {
         Config.API_UPDATE_INTERVAL = 60;
@@ -30,11 +35,11 @@ public class Main extends BSpigotApplication {
 
     @Override
     public void startup() {
-
+        satisfactory = this;
     }
 
     @Override
     public void shutdown() {
-
+        satisfactory = null;
     }
 }
