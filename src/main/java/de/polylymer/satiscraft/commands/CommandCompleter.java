@@ -27,6 +27,7 @@ public class CommandCompleter {
         suggestionMap.put(arg, list);
     }
 
+    //not completely done, but works ( i hope )
     public void suggest(AbstractCommand abstractCommand) {
         Satisfactory.getFactory().getCommand(abstractCommand.getName()).setTabCompleter(new TabCompleter() {
             @NotNull
