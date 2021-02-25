@@ -42,7 +42,7 @@ public class ISaveGameBuilder {
     }
 
     @SafeVarargs
-    private  <V> void write(String key, V... value) {
+    private <V> void write(String key, V... value) {
         try {
             yamlConfiguration.set(key, value);
             yamlConfiguration.save(file);
