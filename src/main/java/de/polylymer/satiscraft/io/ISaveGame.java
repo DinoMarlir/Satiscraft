@@ -24,4 +24,8 @@ public class ISaveGame {
         return new ISaveGameReader(this);
     }
 
+    public ISaveGameWriter getWriter() {
+        return new ISaveGameWriter(this);
+    }
+
 }
