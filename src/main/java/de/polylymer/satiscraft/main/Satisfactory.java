@@ -16,6 +16,10 @@ public class Satisfactory extends BSpigotApplication {
     private static Satisfactory satisfactory;
     private static ISaveGame saveGame;
 
+    public ISaveGame getSaveGame() {
+        return saveGame;
+    }
+
     @Override
     public String name() {
         return "Satiscraft";
