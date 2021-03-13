@@ -5,6 +5,10 @@
 ![open issues](https://img.shields.io/github/issues/PolylymerDE/Satiscraft)
 # Satiscraft
 The Satisfactory game in minecraft
+This is the repository for an opensource Minecraft Plugin, which is the Satisfactory game in Minecraft
+
+# Build
+To build this project just run `./gradlew shadowJar`
 
 
 
