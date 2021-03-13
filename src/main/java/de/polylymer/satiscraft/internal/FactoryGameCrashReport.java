@@ -1,6 +1,9 @@
 package de.polylymer.satiscraft.internal;
 
 import de.polylymer.satiscraft.main.Satisfactory;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.entity.Player;
 
 import javax.swing.*;
 import java.io.File;
@@ -37,6 +40,10 @@ public class FactoryGameCrashReport {
         } catch (IOException ioException) {
             System.out.println("Cannot save crashreport!");
             ioException.printStackTrace();
+        }
+        //TODO Create getAuthenticatedPlayers(); in FactoryGameServer.java
+        for (Player player : Bukkit.getOnlinePlayers()) {
+            player.kickPlayer(ChatColor.DARK_RED + "" + ChatColor.BOLD + "AN ERROR OCCURRED" + ChatColor.GRAY + "\n \nAn internal error occurred in your connection.\n" + ChatColor.WHITE + " \n " + exception.getMessage() + "@" + exception.getCause());
         }
         System.exit(0);
     }
