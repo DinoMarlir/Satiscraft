@@ -8,8 +8,8 @@ plugins {
     kotlin("plugin.serialization") version "1.4.21"
 }
 
-val JVM_VERSION = JavaVersion.VERSION_11
-val JVM_VERSION_STRING = "11"
+val JVM_VERSION = JavaVersion.VERSION_1_8
+val JVM_VERSION_STRING = "1.8"
 
 
 group = "de.polylymer"
