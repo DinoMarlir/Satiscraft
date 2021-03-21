@@ -28,7 +28,7 @@ public class FactoryGameCrashReport {
         try {
             FileWriter writer = new FileWriter(file, true);
             writer.write("CRASH REPORT OF " + new SimpleDateFormat("ss-mm-dd-MM-yyyy").format(new Date()));
-            writer.write("\nError occoured in element Type " + e + " in clazz " + clazz.getName() + ": " + clazz+ "\n");
+            writer.write("\nError occoured in element Type " + e.getClass().getSimpleName() + " in clazz " + clazz.getName() + ": " + clazz+ "\n");
             writer.write("What wrent wrong: " + exception.getMessage() + "\n \n ");
             for(StackTraceElement stackTraceElement : exception.getStackTrace()) {
                 writer.write("\n" + stackTraceElement.getLineNumber() + " @ " + stackTraceElement.getClassName() + "." + stackTraceElement.getMethodName());

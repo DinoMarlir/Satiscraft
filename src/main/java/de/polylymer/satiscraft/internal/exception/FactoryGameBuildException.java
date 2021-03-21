@@ -1,4 +1,4 @@
-package de.polylymer.satiscraft.internal;
+package de.polylymer.satiscraft.internal.exception;
 
 public class FactoryGameBuildException extends Exception {
 
