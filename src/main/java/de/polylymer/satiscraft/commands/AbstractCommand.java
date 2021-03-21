@@ -2,9 +2,11 @@ package de.polylymer.satiscraft.commands;
 
 import de.polylymer.satiscraft.config.Localization;
 import de.polylymer.satiscraft.main.Satisfactory;
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.permissions.Permission;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Arrays;
@@ -26,12 +28,14 @@ public abstract class AbstractCommand implements CommandExecutor {
     }
 
     public AbstractCommand(String name, String permissionNode) {
+        Bukkit.getPluginManager().addPermission(new Permission(permissionNode));
         Satisfactory.getFactory().getCommand(name).setExecutor(this);
         this.permissionNode = permissionNode;
         this.name = name;
     }
 
     public AbstractCommand(String name, String permissionNode, String... aliases) {
+        Bukkit.getPluginManager().addPermission(new Permission(permissionNode));
         Satisfactory.getFactory().getCommand(name).setExecutor(this);
         Satisfactory.getFactory().getCommand(name).setAliases(Arrays.asList(aliases.clone()));
         this.permissionNode = permissionNode;
