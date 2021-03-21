@@ -22,4 +22,4 @@ If you're done with your changes, just open a pull request and request a review.
 
 
 # Build
-To build this project just run `./gradlew shadowJar`
+To build a jarfile from Satiscraft just run `./gradlew shadowJar`
