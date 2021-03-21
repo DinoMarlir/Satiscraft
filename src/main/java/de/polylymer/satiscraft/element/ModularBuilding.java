@@ -10,12 +10,12 @@ import java.util.Collection;
 @Target(ElementType.TYPE)
 public @interface ModularBuilding {
 
-    int elementOne();
-    int elementTwo() default 0;
-    int elementThree() default 0;
-    int elementFour() default 0;
-    int elementFive() default 0;
-    int elementSix() default 0;
-    int elementSeven() default 0;
+    Element elementOne();
+    Element elementTwo() default Element.AIR;
+    Element elementThree() default Element.AIR;
+    Element elementFour() default Element.AIR;
+    Element elementFive() default Element.AIR;
+    Element elementSix() default Element.AIR;
+    Element elementSeven() default Element.AIR;
 
 }
