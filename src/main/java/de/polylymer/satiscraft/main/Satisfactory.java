@@ -1,5 +1,8 @@
 package de.polylymer.satiscraft.main;
 
+import de.polylymer.satiscraft.commands.implementation.EventCommand;
+import de.polylymer.satiscraft.config.Localization;
+import de.polylymer.satiscraft.internal.FactoryGameCrashReport;
 import de.polylymer.satiscraft.io.ISaveGame;
 import de.polylymer.satiscraft.io.ISaveGameBuilder;
 import mooziii.annotation.PluginApp;
@@ -43,12 +46,14 @@ public class Satisfactory extends BSpigotApplication {
     public void load() {
         Config.API_UPDATE_INTERVAL = 60;
         Config.WEBAPI = false; // Web-API disabled by default so mods have to turn them on!
+        new Localization();
     }
 
     @Override
     public void startup() {
         satisfactory = this;
         saveGame = new ISaveGameBuilder().setLastModification(new Date()).build();
+        new EventCommand();
     }
 
     @Override

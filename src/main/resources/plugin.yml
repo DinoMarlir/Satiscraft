@@ -1,3 +1,5 @@
   name: Satiscraft
   main: de.polylymer.satiscraft.main.Satisfactory
   version: 1.0
+  commands:
+    event:
