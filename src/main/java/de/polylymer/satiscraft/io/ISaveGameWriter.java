@@ -18,7 +18,7 @@ public class ISaveGameWriter {
     }
 
     @SuppressWarnings("unchecked")
-    public <V> void write(String key, V... value) {
+    public <V> void write(String key, V value) {
         try {
             yamlConfiguration.set(key,value);
             yamlConfiguration.set("last-modify", new SimpleDateFormat("mm:HH, dd.MM.yyyy").format(new Date()));

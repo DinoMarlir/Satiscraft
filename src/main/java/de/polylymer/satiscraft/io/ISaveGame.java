@@ -8,7 +8,7 @@ import java.util.UUID;
 public class ISaveGame {
 
     private UUID owner;
-    private Date lastModified;
+    private String lastModified;
     private File file;
 
     public ISaveGame(File file) {

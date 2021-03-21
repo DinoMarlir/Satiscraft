@@ -15,9 +15,11 @@ public class ISaveGameBuilder {
     private YamlConfiguration yamlConfiguration;
 
     public ISaveGameBuilder() {
+        if(!new File("./savegames").exists()) {
+            new File("./savegames").mkdirs();
+        }
         file = new File("./savegames/", "savegame.yml");
         if(!file.exists()) {
-            file.mkdirs();
             try {
                 file.createNewFile();
             } catch (IOException e) {
@@ -41,8 +43,7 @@ public class ISaveGameBuilder {
         return new ISaveGame(file);
     }
 
-    @SafeVarargs
-    private <V> void write(String key, V... value) {
+    private <V> void write(String key, V value) {
         try {
             yamlConfiguration.set(key, value);
             yamlConfiguration.save(file);
