@@ -1,5 +1,6 @@
 package de.polylymer.satiscraft.modding;
 
+import de.polylymer.satiscraft.audio.SoundTrack;
 import de.polylymer.satiscraft.event.Event;
 import de.polylymer.satiscraft.internal.FactoryGameCrashReport;
 import de.polylymer.satiscraft.modding.event.Action;
@@ -23,7 +24,7 @@ public final class ModLoader {
 
     }
 
-    public void registerModPartClass(Class<? extends ModPart> clazz) {
+    public void registerModPartClass(Class<?> clazz) {
         for (Method method : clazz.getMethods()) {
             Modify modify = method.getAnnotation(Modify.class);
             if(modify != null) {

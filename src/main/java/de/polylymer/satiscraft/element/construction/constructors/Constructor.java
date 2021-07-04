@@ -6,7 +6,7 @@ import de.polylymer.satiscraft.element.construction.InputOutput;
 import de.polylymer.satiscraft.element.ModularBuilding;
 
 @ModularBuilding(
-        elementOne = Element.AIR
+        buildingCosts = {Element.AIR}
 )
 public class Constructor implements PlaceableElement<InputOutput> {
 

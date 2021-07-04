@@ -1,5 +1,8 @@
   name: Satiscraft
   main: de.polylymer.satiscraft.main.Satisfactory
   version: 1.0
+  api-version: 1.16
   commands:
     event:
+    playsound:
+    summon:

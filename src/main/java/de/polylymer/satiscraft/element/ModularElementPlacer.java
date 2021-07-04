@@ -7,9 +7,9 @@ import de.polylymer.satiscraft.main.Satisfactory;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
-public interface ModularElementPlacer {
+public abstract class ModularElementPlacer {
 
-    default <E> void place(Player player, E e, Location location) {
+    public <E> void place(Player player, E e, Location location) {
         EventDisplay.addToStash("|");
         ModularBuilding modularBuilding = e.getClass().getAnnotation(ModularBuilding.class);
         if(modularBuilding != null) {

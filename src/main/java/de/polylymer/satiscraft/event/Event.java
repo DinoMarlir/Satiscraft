@@ -7,8 +7,6 @@ import de.polylymer.satiscraft.internal.exception.FactoryGameEventDisplayExcepti
 import de.polylymer.satiscraft.modding.ModLoader;
 import de.polylymer.satiscraft.modding.event.Action;
 import de.polylymer.satiscraft.modding.event.player.PlayerPlaceModularBuildingAction;
-
-import java.io.Serializable;
 import java.lang.reflect.Method;
 
 public enum Event {
